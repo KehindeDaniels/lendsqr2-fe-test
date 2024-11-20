@@ -1,0 +1,40 @@
+@mixin respond-to($media) {
+  @if $media == "desktop" {
+    @content;
+  } @else if $media == "tablet" {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $media == "phone" {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
+
+// Button mix-in
+
+@mixin button-style($color) {
+  border: 1px solid $color;
+  color: $color;
+  min-width: 180px;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $color;
+    color: white;
+  }
+}
+
+// @include mx.respond-to('tablet') {
+//     // Tablet styles
+//     width: 95%;
+//     padding: 15px;
+//   }
