@@ -5,7 +5,7 @@ import { User } from "../../types";
 import ActionMenu from "./action-menu";
 import { FilterIcon } from "../../assets/index"; // Ensure these icons are correctly imported
 
-import "./userList.scss";
+// import "./userList.scss";
 
 const formatDate = (dateString: string): string => {
   const date = new Date(dateString);
