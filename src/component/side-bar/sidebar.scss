@@ -5,10 +5,12 @@
   position: relative;
   max-width: 250px;
   transition: max-width 0.3s ease, transform 0.3s ease;
+  z-index: 100000000;
 
   &.open {
     max-width: 250px;
     transform: translateX(0);
+    margin-right: -4rem;
   }
   &.closed {
     width: 0px;
@@ -16,7 +18,9 @@
 
   @include respond-to("phone") {
     position: absolute;
-    z-index: 10000000000;
+    // z-index: 10000000000;
+    // z-index: 100000000;
+
     background-color: white;
   }
 
@@ -27,7 +31,6 @@
     overflow: auto;
     padding-top: 2rem;
     box-shadow: 8px 5px 10px 0px rgba(0, 0, 0, 0.04);
-
     @include respond-to("phone") {
       // width: 0; // Sidebar completely hidden on mobile by default
       // allow to traslate away from view
@@ -155,13 +158,16 @@
     border: none;
     position: absolute;
     top: 10px;
-    left: -13px;
+    left: 11px;
     z-index: 100000;
     width: 80px;
     height: 30px;
     display: flex;
     // background: #000;
 
+    @include respond-to("tablet") {
+      left: -13px;
+    }
     // @include respond-to("tablet") {
     //   .toggle-button {
     //     top: 15px;

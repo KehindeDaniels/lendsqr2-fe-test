@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./userList.scss";
+import "./userlist.scss";
 import {
   useReactTable,
   getCoreRowModel,
