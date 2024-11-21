@@ -8,9 +8,11 @@
   justify-content: space-between;
   margin-bottom: 2rem;
   width: 100%;
+  //   background: #000;
 
   @include respond-to("phone") {
-    margin: 1rem 4rem;
+    // margin: 1rem 4rem;
+    margin-top: 1rem;
   }
 
   .goback {
@@ -48,13 +50,24 @@
       text-align: center;
     }
 
-    button {
-      &:first-child {
-        @include button-style($color-error);
-        margin-right: 1rem;
+    .action {
+      display: flex;
+      gap: 1rem;
+
+      @include respond-to("phone") {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
       }
-      &:last-child {
-        @include button-style($color-active);
+
+      button {
+        &:first-child {
+          @include button-style($color-error);
+        }
+        &:last-child {
+          @include button-style($color-active);
+        }
       }
     }
   }

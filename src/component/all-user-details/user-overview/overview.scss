@@ -2,6 +2,7 @@
 @use "../../../style/mixins" as *;
 
 .userDetailsSummary {
+  //   background: #000;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -19,6 +20,11 @@
       position: absolute;
       top: 0;
       right: 0;
+    }
+
+    @include respond-to("phone") {
+      top: -24px;
+      right: -24px;
     }
 
     .active,

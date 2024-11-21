@@ -20,7 +20,7 @@
   //   background-color: re;
 
   @include respond-to("phone") {
-    padding: 2rem 4rem;
+    padding: 1rem;
   }
 
   .summary-card {
