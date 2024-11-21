@@ -3,7 +3,7 @@ export { default as AuditIcon } from "./audit.svg";
 export { default as DecisionIcon } from "./decision.svg";
 export { default as FeesIcon } from "./fees.svg";
 // export { default as FeesAndPricingIcon } from "./feesAndPricing.svg";
-export { default as feesAndPricing } from "./feesAndPricing.svg";
+export { default as feep } from "./feep.svg";
 export { default as GuarantorsIcon } from "./guarantors.svg";
 export { default as HomeIcon } from "./home.svg";
 export { default as KarmaIcon } from "./karma.svg";

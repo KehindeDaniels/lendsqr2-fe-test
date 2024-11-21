@@ -8,7 +8,7 @@ import {
   AuditIcon,
   DecisionIcon,
   FeesIcon,
-  feesAndPricing,
+  feep,
   GuarantorsIcon,
   HomeIcon,
   KarmaIcon,
@@ -87,7 +87,7 @@ const SideBar: React.FC = () => {
         { name: "Preferences", icon: SystemMessageIcon, path: "/preferences" },
         {
           name: "Fees and Pricing",
-          icon: feesAndPricing,
+          icon: feep,
           path: "/fees-pricing",
         },
         { name: "Audit Logs", icon: AuditIcon, path: "/audit-logs" },
