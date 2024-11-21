@@ -1,4 +1,3 @@
-// src/components/UserList/columns.ts
 import { useNavigate } from "react-router-dom";
 import { ColumnDef } from "@tanstack/react-table";
 import { User } from "../../types";
