@@ -6,7 +6,7 @@ import { useUsers } from "../../../context";
 // import activate from "../../assets/activate.svg";
 import { eye, blacklist, activate } from "../../../assets";
 
-import "./actionMenu.scss";
+import "./actionmenu.scss";
 interface ActionMenuProps {
   userId: string;
 }
