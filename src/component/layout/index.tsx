@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import NavBar from "../nav-bar";
 // import NavBar from "../NavBar/NavBar";
 // import SideBar from "../SideBar/SideBar";
 // import "./layout.scss";
@@ -7,8 +8,9 @@ import { Outlet } from "react-router-dom";
 const Layout: React.FC = () => {
   return (
     <div className="layout">
-      Layyout
-      <div className="navBar">{/* <NavBar /> */}</div>
+      <div className="navBar">
+        <NavBar />
+      </div>
       <div className="container">
         <div className="sidebar-layout">{/* <SideBar /> */}</div>
         <main className="main-content">
