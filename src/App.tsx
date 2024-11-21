@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { UserProvider } from "./context";
 import Login from "./pages/login-page";
 import Layout from "./component/layout";
-import Users from "./pages/users";
+import Users from "./pages/user";
 import UserDetails from "./pages/user-details";
 import NotFound from "./pages/not-found";
 const App: React.FC = () => {

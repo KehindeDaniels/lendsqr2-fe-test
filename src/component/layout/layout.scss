@@ -29,7 +29,7 @@
     }
 
     .sidebar-layout {
-      //   max-width: 350px;
+      max-width: 250px;
       //   padding: 3rem;
       position: sticky;
       top: 0;
@@ -43,6 +43,7 @@
       max-height: 100vh;
       overflow: auto;
       padding: 1rem 2rem;
+      padding-left: 5.5rem;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -51,10 +52,12 @@
 
       @include respond-to("tablet") {
         padding: 1rem 2rem;
+        padding-left: 6rem;
       }
 
       @include respond-to("phone") {
         // padding: 2rem 6rem;
+        padding-left: 1rem;
       }
     }
   }

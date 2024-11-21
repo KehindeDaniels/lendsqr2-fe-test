@@ -3,13 +3,21 @@
 
 .sidebar-container {
   position: relative;
-  width: 250px;
+  max-width: 250px;
+  transition: max-width 0.3s ease, transform 0.3s ease;
+
   &.open {
     max-width: 250px;
     transform: translateX(0);
   }
   &.closed {
     width: 0px;
+  }
+
+  @include respond-to("phone") {
+    position: absolute;
+    z-index: 10000000000;
+    background-color: white;
   }
 
   .sidebar {

@@ -36,3 +36,6 @@ export { default as LoanUserIcon } from "./loanUsers.svg";
 export { default as LogInIllustrationImage } from "./loginIllustration.png";
 export { default as SavingUserIcon } from "./savinUsers.svg";
 export { default as SummaryUserIcon } from "./summaryuser.svg";
+export { default as eye } from "./eye.svg";
+export { default as blacklist } from "./blacklist.svg";
+export { default as activate } from "./activate.svg";
