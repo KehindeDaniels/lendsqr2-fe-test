@@ -2,6 +2,7 @@
 @use "../../style/mixins" as *;
 
 .navbar {
+  z-index: 100000000000000000;
   max-width: 1500px;
   display: flex;
   justify-content: space-between;

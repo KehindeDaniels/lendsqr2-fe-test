@@ -1,12 +1,12 @@
 // src/pages/Dashboard.tsx
 import React from "react";
 import UserList from "../../component/user-list";
-// import UserSummary from "../components/userSummary/UserSummary";
+import UserSummary from "../../component/dashboard-summary";
 
 const Dashboard: React.FC = () => {
   return (
     <div>
-      {/* <UserSummary /> */}
+      <UserSummary />
       <UserList />
     </div>
   );
