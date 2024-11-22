@@ -116,6 +116,12 @@
       border-radius: 30px;
     }
 
+    tr {
+      &:hover {
+        cursor: pointer;
+        background-color: #f5f5f7;
+      }
+    }
     @include respond-to("tablet") {
       th,
       td {
