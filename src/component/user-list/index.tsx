@@ -39,7 +39,6 @@ const UserList: React.FC = () => {
     },
   });
 
-  // Check here akanni
   function generatePaginationButtons(
     currentPage: number,
     totalPages: number,
@@ -96,7 +95,10 @@ const UserList: React.FC = () => {
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
-                  <th key={header.id}>
+                  <th
+                    key={header.id}
+                    onClick={header.column.getToggleSortingHandler()}
+                  >
                     {flexRender(
                       header.column.columnDef.header,
                       header.getContext()

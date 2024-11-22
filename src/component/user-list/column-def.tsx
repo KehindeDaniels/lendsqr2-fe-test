@@ -4,7 +4,6 @@ import { User } from "../../types";
 import ActionMenu from "./action-menu";
 import { FilterIcon } from "../../assets";
 import "./userlist.scss";
-
 const formatDate = (dateString: string): string => {
   const date = new Date(dateString);
   return new Intl.DateTimeFormat("en-US", {
@@ -61,6 +60,7 @@ export const columns: ColumnDef<User>[] = [
       </div>
     ),
     cell: (info) => info.getValue(),
+    enableSorting: true,
   },
   {
     id: "dateJoined",
