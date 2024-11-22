@@ -1,7 +1,6 @@
 import React from "react";
 import { User } from "../../../types";
 import "./overview.scss";
-
 interface UserDetailsSummaryProps {
   userDetail: User | undefined;
 }

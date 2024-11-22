@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Outlet, useNavigate } from "react-router-dom";
-import { useUsers } from "../../context/"; // Make sure the path matches
+import { useUsers } from "../../context/";
 import UserDetailsSummary from "../../component/all-user-details/user-overview";
 import UserDetailNav from "../../component/all-user-details/detail-navigation";
 import UserDetailInfo from "../../component/all-user-details/user-info";
@@ -10,9 +10,31 @@ import "./user-details.scss";
 
 const UserDetails: React.FC = () => {
   const { userId } = useParams();
-  const { users, fetchUsers } = useUsers();
+  const { users, fetchUsers, updateUserStatus } = useUsers();
   const [userDetail, setUserDetail] = useState<User | undefined>();
   const navigate = useNavigate();
+
+  //   Actuvate user handlar
+  const handleActivateUser = () => {
+    if (userDetail) {
+      updateUserStatus(userDetail.generalInfo.id, "Active");
+      setUserDetail({
+        ...userDetail,
+        generalInfo: { ...userDetail.generalInfo, status: "Active" },
+      });
+    }
+  };
+
+  //   Blacklist user handlar
+  const handleBlacklistUser = () => {
+    if (userDetail) {
+      updateUserStatus(userDetail.generalInfo.id, "Blacklisted");
+      setUserDetail({
+        ...userDetail,
+        generalInfo: { ...userDetail.generalInfo, status: "Blacklisted" },
+      });
+    }
+  };
 
   useEffect(() => {
     if (users.length === 0) {
@@ -38,8 +60,8 @@ const UserDetails: React.FC = () => {
         <div className="header-action">
           <h1>User Details</h1>
           <div className="action">
-            <button>Blacklist User</button>
-            <button>Activate User</button>
+            <button onClick={handleBlacklistUser}>Blacklist User</button>
+            <button onClick={handleActivateUser}>Activate User</button>
           </div>
         </div>
       </div>

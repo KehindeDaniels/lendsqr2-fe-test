@@ -8,6 +8,7 @@
   // background-color: red;
   max-width: 1400px;
   margin: 0 auto;
+  overflow: hidden;
 
   @include respond-to("phone") {
     // flex-direction: row;

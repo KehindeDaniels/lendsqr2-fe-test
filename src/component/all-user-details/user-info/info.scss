@@ -44,6 +44,11 @@
       gap: 24px;
       text-wrap: wrap;
 
+      @include respond-to("phone") {
+        justify-content: center;
+        grid-template-columns: 1fr;
+      }
+
       .section-label {
         display: flex;
         flex-direction: column;
