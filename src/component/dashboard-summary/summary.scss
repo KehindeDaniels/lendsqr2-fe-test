@@ -39,6 +39,7 @@
 
     @include respond-to("phone") {
       align-items: center;
+      text-align: center;
     }
     .icon {
       width: 40px;
