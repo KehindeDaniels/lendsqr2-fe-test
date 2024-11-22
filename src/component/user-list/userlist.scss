@@ -35,7 +35,6 @@
     // background: red;
 
     @include respond-to("phone") {
-      //   margin: 2rem 4rem;
     }
     .column-header {
       display: flex;
@@ -79,6 +78,9 @@
       text-transform: uppercase;
     }
 
+    .status {
+      text-align: center;
+    }
     .sactive,
     .sinactive,
     .sblacklisted,
@@ -114,19 +116,17 @@
       border-radius: 30px;
     }
 
-    // Responsive adjustments
     @include respond-to("tablet") {
       th,
       td {
-        padding: 0.5rem; // Smaller padding on tablets
+        padding: 0.5rem;
       }
     }
 
     @include respond-to("phone") {
-      // Adjustments for mobile view
       th,
       td {
-        padding: 0.25rem; // Even smaller padding on phones
+        padding: 0.25rem;
       }
     }
   }

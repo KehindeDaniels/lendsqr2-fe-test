@@ -17,7 +17,7 @@ const ActionMenu: React.FC<ActionMenuProps> = ({ userId }) => {
   const navigate = useNavigate();
 
   const toggleMenu = () => setShowMenu(!showMenu);
-  const handleViewDetails = () => navigate(`/dashboard/users/${userId}`);
+  const handleViewDetails = () => navigate(`/user/${userId}`);
   const handleBlacklistUser = () => {
     updateUserStatus(userId, "Blacklisted");
     toggleMenu();
@@ -30,7 +30,7 @@ const ActionMenu: React.FC<ActionMenuProps> = ({ userId }) => {
   return (
     <div className="menu-container">
       <button className="menu-button" onClick={toggleMenu}>
-        &#x22EE; {/* Vertical ellipsis */}
+        &#x22EE;
       </button>
       {showMenu && (
         <div className="menu-dropdown">
