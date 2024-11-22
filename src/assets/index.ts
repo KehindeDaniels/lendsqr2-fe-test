@@ -39,3 +39,4 @@ export { default as SummaryUserIcon } from "./summaryuser.svg";
 export { default as eye } from "./eye.svg";
 export { default as blacklist } from "./blacklist.svg";
 export { default as activate } from "./activate.svg";
+export { default as errorIcon } from "./error.png";
