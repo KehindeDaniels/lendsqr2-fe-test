@@ -93,11 +93,19 @@ export const columns: ColumnDef<User>[] = [
         <img src={FilterIcon} alt="Sort" />
       </div>
     ),
-    cell: (info) => (
-      <span className={`status ${(info.getValue() as string).toLowerCase()}`}>
-        {info.getValue() as string}
-      </span>
-    ),
+    cell: (info) => {
+      const statusValue = info.getValue() as string;
+      let statusClass = "sinactive";
+      if (statusValue === "Active") {
+        statusClass = "sactive";
+      } else if (statusValue === "Blacklisted") {
+        statusClass = "sblacklisted";
+      } else if (statusValue === "Pending") {
+        statusClass = "spending";
+      }
+
+      return <span className={`status ${statusClass}`}>{statusValue}</span>;
+    },
   },
   {
     id: "action",
